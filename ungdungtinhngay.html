@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinh ngay</title>
+</head>
+<body>
+    <form>
+        <input type="text" value="" id="txt"/>
+        <input type="button" onclick="month();" value="Tinh so ngay"/>
+        <div id="top"></div>
+    </form>
+
+    <script>
+        function month() {
+            var a = document.getElementById("txt").value;
+            var area = Number(a);
+
+            switch (area) {
+                case 1:
+                    document.getElementById("top").innerText="Thang" + area + "Co 31 ngay";
+                    break;
+                case 2:
+                    document.getElementById("top").innerText="Thang" + " " + area + " " + "Co 28 hoac 29 ngay";
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                case 10:
+                case 11:
+                case 12:
+                    document.getElementById("top").innerText= "Thang" + " " + area + " " + "co 30 ngay";
+                    break;
+            }
+        }
+    </script>
+
+</body>
+</html>
